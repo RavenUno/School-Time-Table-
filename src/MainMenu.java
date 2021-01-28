@@ -1,6 +1,9 @@
-//Школьный проект 2019 год. Для родителей учеников Школы №2
+//Школьный проект 2019 год. Для родителей учеников Школы №2 
+// School project 2019. For parents and student of school #2 
 //   Тестовая версия
+// 	Test loyal version
 //            я его не хотел
+//		i don't want him.
 
 import java.util.Scanner;
 
@@ -14,23 +17,23 @@ public class MainMenu {
         String realLesson = null;
         String realDay = null;
 
-        System.out.println("Если-бы ввели имя вашего бл****, е***** ребёнка - это ничего бы не изменило -_- $> ");
+        System.out.print("Если-бы ввели имя вашего ребёнка - это ничего бы не изменило -_- $> ");
         String kidName = in.nextLine();
 
-        System.out.println("Было-бы круто, если-бы вы ввели сегодняшний день -_- (Понедельник, вторник, среда, четверг или пятница, но только понедельник и вторник TEST VERSION!1) $> ");
+        System.out.print("Было-бы круто, если-бы вы ввели сегодняшний день -_- (Понедельник, вторник, среда, четверг или пятница, но только понедельник и вторник TEST VERSION!1) $> ");
         String realDayName = in.nextLine();
 
-        System.out.println("Было-бы круто, если бы вы ввели класс, в котором учится ваш бл****, е***** ребёнок $> ");
+        System.out.print("Было-бы круто, если бы вы ввели класс, в котором учится ваш ребёнок (только 1 и 2 TEST VERSION !1) $> ");
         int kidClass = in.nextInt();
 
-        System.out.println("Было-бы круто, если-бы вы ввели реальное время -_- (8,00; 8,30; 8,56 и.т.д) $> ");
+        System.out.print("Было-бы круто, если-бы вы ввели реальное время -_- (8,00; 8,30; 8,56 и.т.д) $> ");
         float realTime = in.nextFloat();
 //---------------------------------------------------------------------
 
         if(kidClass >= 10 || kidClass < 0){
-            System.out.println(" В этой школе всего 9 классов, е**** ты убл***к -_-");
+            System.out.print(" В этой школе всего 9 классов -_-");
         }
-
+//-------------------------------------------------------------
         switch (realDayName.toUpperCase()){
             case "ПОНЕДЕЛЬНИК":
                 realDay = "Monday";
@@ -39,11 +42,11 @@ public class MainMenu {
                 realDay = "Thursday";
                 break;
             default:
-                System.out.println("Нет такого дня недели, е**** ты уёб*к!!");
+                System.out.print("Нет такого дня недели!");
         }
 
-//----------------------------------------------------------------   (-_- ) xex я не придумал лучшую реализацию
-        if(realTime < 8.00)
+//----------------------------------------------------------------   (-_- ) xex я не придумал лучшую реализацию (heh, I have not come up with a better implementation )
+        if(realTime < 8.00) 
             realLesson = "0";
         if (realTime >= 8.00 && realTime < 8.40)
             realLesson = "1";
@@ -64,7 +67,7 @@ public class MainMenu {
 //------------------------------------------------------------- (-_- ) xex
 
         String lesDir = "tables/" + "Class" + kidClass + "/" + realDay + "/" + "less" + realLesson;
-        System.out.println("Сейчас ваш бл****, е***** ребёнок на: " + TableJobing.setLesson(lesDir));
+        System.out.print("Сейчас ваш ребёнок на: " + TableJobing.setLesson(lesDir));
 
     }
 }
